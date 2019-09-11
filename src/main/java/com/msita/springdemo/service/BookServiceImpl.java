@@ -24,5 +24,11 @@ public class BookServiceImpl implements BookService {
 		return bookDAO.getBooks();
 	}
 	
-
+	public Book getBook(int id) {
+		return bookDAO.getBook(id);
+	}
+	
+	public void createBook(Book book) {
+		bookDAO.createBook(book);
+	}
 }

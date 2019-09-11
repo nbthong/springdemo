@@ -14,7 +14,7 @@
 		
 		<a href="${pageContext.request.contextPath}/book/getall">Book List</a>
 		
-		<a href="${pageContext.request.contextPath}/createBook">Create Book</a>
+		<a href="${pageContext.request.contextPath}/book/create">Create Book</a>
 		
 		<a href="${pageContext.request.contextPath}/logout">Logout</a>
 	</div>
