@@ -21,10 +21,27 @@ public class BookDAOImpl implements BookDAO{
     private Session getCurrentSession(){
         return sessionFactory.getCurrentSession();
     }
-	 
+	
+    public Book getBook(int id){
+        Book book = (Book) getCurrentSession().get(Book.class,id);
+        return book;
+    }
+    
 	public List<Book> getBooks(){
         Criteria cr = getCurrentSession().createCriteria(Book.class);
         return cr.list();
     }
+	
+	
+	public void createBook(Book book) {
+		getCurrentSession().save(book);
+	}
 	   
+	public void deleteBook(Book book) {
+		getCurrentSession().delete(book);
+	}
+	
+	public void updateBook(Book book) {
+        getCurrentSession().update(book);
+    }
 }

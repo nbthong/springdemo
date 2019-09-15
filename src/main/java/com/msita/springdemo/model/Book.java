@@ -28,9 +28,6 @@ public class Book {
 	 @Column(name = "price")
 	private int price;
 	
-	 @Column(name = "photo")
-	private byte[] photo;
-	
 	public int getId() {
 		return id;
 	}
@@ -61,10 +58,5 @@ public class Book {
 	public String getAuthor() {
 		return author;
 	}
-	public byte[] getPhoto() {
-		return photo;
-	}
-	public void setPhoto(byte[] photo) {
-		this.photo = photo;
-	}
+
 }

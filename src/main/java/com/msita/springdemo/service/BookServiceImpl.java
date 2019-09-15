@@ -20,9 +20,30 @@ public class BookServiceImpl implements BookService {
 
 	@Autowired
 	private BookDAO bookDAO;
+	
 	public List<Book> getBooks() {
 		return bookDAO.getBooks();
 	}
 	
-
+	public Book getBook(int id) {
+		return bookDAO.getBook(id);
+	}
+	
+	public void createBook(Book book) {
+		bookDAO.createBook(book);
+	}
+	
+	public void deleteBook(int id) {
+		
+		Book book = bookDAO.getBook(id);
+		
+		if (book != null) {
+			bookDAO.deleteBook(book);
+		} 	
+		
+	}
+	
+	public void updateBook(Book book) {
+		bookDAO.updateBook(book);
+	}
 }
