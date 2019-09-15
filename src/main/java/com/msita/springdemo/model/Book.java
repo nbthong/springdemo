@@ -58,8 +58,4 @@ public class Book {
 	public String getAuthor() {
 		return author;
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 929d530593738d401ced38dd8f607c8d1c063041
 }

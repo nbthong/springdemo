@@ -32,12 +32,9 @@ public class BookServiceImpl implements BookService {
 	public void createBook(Book book) {
 		bookDAO.createBook(book);
 	}
-<<<<<<< HEAD
 	
 	public void deleteBook(int id) {
-		
 		Book book = bookDAO.getBook(id);
-		
 		if (book != null) {
 			bookDAO.deleteBook(book);
 		} 	
@@ -47,6 +44,4 @@ public class BookServiceImpl implements BookService {
 	public void updateBook(Book book) {
 		bookDAO.updateBook(book);
 	}
-=======
->>>>>>> 929d530593738d401ced38dd8f607c8d1c063041
 }

@@ -31,8 +31,6 @@ public class BookDAOImpl implements BookDAO{
         Criteria cr = getCurrentSession().createCriteria(Book.class);
         return cr.list();
     }
-<<<<<<< HEAD
-	
 	
 	public void createBook(Book book) {
 		getCurrentSession().save(book);
@@ -44,15 +42,5 @@ public class BookDAOImpl implements BookDAO{
 	
 	public void updateBook(Book book) {
         getCurrentSession().update(book);
-=======
-
-	public void createBook(Book book) {
-		getCurrentSession().save(book);
 	}
-	
-	public Book getBook(int id){
-		Book book = (Book) getCurrentSession().get(Book.class,id);
-        return book;
->>>>>>> 929d530593738d401ced38dd8f607c8d1c063041
-    }
 }
