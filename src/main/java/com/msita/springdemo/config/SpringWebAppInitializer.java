@@ -9,7 +9,6 @@ import javax.servlet.ServletRegistration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -27,10 +26,6 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
 		
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
-		
-		dispatcher.setInitParameter("contextClass", appContext.getClass().getName());
-		
-		servletContext.addListener(new ContextLoaderListener(appContext));
 	}
 
 }
