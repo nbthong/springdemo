@@ -10,5 +10,5 @@ import com.msita.springdemo.model.User;
  *
  */
 public interface UserDAO {
-	public User getUserByUsernameAndPassword(String username, String password);
+	public User getUserByUsername(String username);
 }

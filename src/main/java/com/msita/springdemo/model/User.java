@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name = "book")
+@Table(name = "user")
 public class User {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +29,8 @@ public class User {
 	 @Column(name = "password")
 	private String password;
 
+	 @Column(name = "role")
+	private String role;
 	/**
 	 * @return the id
 	 */
@@ -69,6 +71,20 @@ public class User {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the role
+	 */
+	public String getRole() {
+		return role;
+	}
+
+	/**
+	 * @param role the role to set
+	 */
+	public void setRole(String role) {
+		this.role = role;
 	}
 	 
 	 
